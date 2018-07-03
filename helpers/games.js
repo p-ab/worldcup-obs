@@ -2,18 +2,30 @@ const DATA = require('../DATA/teams.json');
 const teams = DATA.teams;
 
 /* * * * * * * *
+<<<<<<< HEAD
 * reformData includes next functions:
 *   - getRuName(team_id)
 * * * * * * * */
 const reformData = (data) => {
+=======
+* reSortData use inside next functions:
+*   - getRuName(team_id)
+* * * * * * * */
+const reSortData = (data) => {
+>>>>>>> c8c79c3... Add Controller & Helper
     let games = [];
     let closest_game = [];
 
     for (const group of Object.keys(data)) {
         let unfinishedGames = [];
         data[group].matches.map( match => {
+<<<<<<< HEAD
             const gameRow = getRuName(match.home_team) + ' — ' + getRuName(match.away_team);
             const scoreRow = match.home_result + ' — ' + match.away_result;
+=======
+            let gameRow = getRuName(match.home_team) + ' — ' + getRuName(match.away_team);
+            let scoreRow = match.home_result + ' — ' + match.away_result;
+>>>>>>> c8c79c3... Add Controller & Helper
             if (match.finished) {
                 games.push({
                     id: match.name,
@@ -44,18 +56,30 @@ const reformData = (data) => {
 };
 
 /* * * * * * * *
+<<<<<<< HEAD
 * reformGames includes next functions:
 *   - insertGame(game, score, id)
 *   - setCountrytat(team)
 * * * * * * * */
 const reformGames = (rows, games) => {
+=======
+* reSortGames use inside next functions:
+*   - insertGame(game, score, id)
+*   - setCountrytat(team)
+* * * * * * * */
+const reSortGames = (rows, games) => {
+>>>>>>> c8c79c3... Add Controller & Helper
     let haveArticle = true;
     let i = 0;
     let games_list = [];
 
     rows.forEach( row => games_list.push(row.game_id) );
     games.map( data => {
+<<<<<<< HEAD
         const isGameExists = games_list.includes(data.id);
+=======
+        let isGameExists = games_list.includes(data.id);
+>>>>>>> c8c79c3... Add Controller & Helper
         if (!isGameExists) {
             let countries = data.game.split(' — ');
             i++;
@@ -71,7 +95,11 @@ const reformGames = (rows, games) => {
 };
 
 /* * * * * * * *
+<<<<<<< HEAD
 * setCountryStat includes next functions:
+=======
+* setCountryStat use inside next functions:
+>>>>>>> c8c79c3... Add Controller & Helper
 *   - updateStat(country, data)
 * * * * * * * */
 const setCountryStat = async (country, basket) => {
@@ -160,5 +188,9 @@ const insertGame = async (game, score, id) => {
     });
 };
 
+<<<<<<< HEAD
 const gamesHelper = { reformData, reformGames };
 module.exports = gamesHelper;
+=======
+export {reSortData, reSortGames};
+>>>>>>> c8c79c3... Add Controller & Helper
