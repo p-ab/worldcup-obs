@@ -1,0 +1,164 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "en_name": "Russia",
+      "ru_name": "Россия"
+    },
+    {
+      "id": 2,
+      "en_name": "Saudi Arabia",
+      "ru_name": "Саудовская Аравия"
+    },
+    {
+      "id": 3,
+      "en_name": "Egypt",
+      "ru_name": "Египет"
+    },
+    {
+      "id": 4,
+      "en_name": "Uruguay",
+      "ru_name": "Уругвай"
+    },
+    {
+      "id": 5,
+      "en_name": "Portugal",
+      "ru_name": "Португалия"
+    },
+    {
+      "id": 6,
+      "en_name": "Spain",
+      "ru_name": "Испания"
+    },
+    {
+      "id": 7,
+      "en_name": "Morocco",
+      "ru_name": "Марокко"
+    },
+    {
+      "id": 8,
+      "en_name": "Iran",
+      "ru_name": "Иран"
+    },
+    {
+      "id": 9,
+      "en_name": "France",
+      "ru_name": "Франция"
+    },
+    {
+      "id": 10,
+      "en_name": "Australia",
+      "ru_name": "Австралия"
+    },
+    {
+      "id": 11,
+      "en_name": "Peru",
+      "ru_name": "Перу"
+    },
+    {
+      "id": 12,
+      "en_name": "Denmark",
+      "ru_name": "Дания"
+    },
+    {
+      "id": 13,
+      "en_name": "Argentina",
+      "ru_name": "Аргентина"
+    },
+    {
+      "id": 14,
+      "en_name": "Iceland",
+      "ru_name": "Исландия"
+    },
+    {
+      "id": 15,
+      "en_name": "Croatia",
+      "ru_name": "Хорватия"
+    },
+    {
+      "id": 16,
+      "en_name": "Nigeria",
+      "ru_name": "Нигерия"
+    },
+    {
+      "id": 17,
+      "en_name": "Brazil",
+      "ru_name": "Бразилия"
+    },
+    {
+      "id": 18,
+      "en_name": "Switzerland",
+      "ru_name": "Швейцария"
+    },
+    {
+      "id": 19,
+      "en_name": "Costa Rica",
+      "ru_name": "Коста-Рика"
+    },
+    {
+      "id": 20,
+      "en_name": "Serbia",
+      "ru_name": "Сербия"
+    },
+    {
+      "id": 21,
+      "en_name": "Germany",
+      "ru_name": "Германия"
+    },
+    {
+      "id": 22,
+      "en_name": "Mexico",
+      "ru_name": "Мексика"
+    },
+    {
+      "id": 23,
+      "en_name": "Sweden",
+      "ru_name": "Швеция"
+    },
+    {
+      "id": 24,
+      "en_name": "South Korea",
+      "ru_name": "Южная Корея"
+    },
+    {
+      "id": 25,
+      "en_name": "Belgium",
+      "ru_name": "Бельгия"
+    },
+    {
+      "id": 26,
+      "en_name": "Panama",
+      "ru_name": "Панама"
+    },
+    {
+      "id": 27,
+      "en_name": "Tunisia",
+      "ru_name": "Тунис"
+    },
+    {
+      "id": 28,
+      "en_name": "England",
+      "ru_name": "Англия"
+    },
+    {
+      "id": 29,
+      "en_name": "Poland",
+      "ru_name": "Польша"
+    },
+    {
+      "id": 30,
+      "en_name": "Senegal",
+      "ru_name": "Сенегал"
+    },
+    {
+      "id": 31,
+      "en_name": "Colombia",
+      "ru_name": "Колумбия"
+    },
+    {
+      "id": 32,
+      "en_name": "Japan",
+      "ru_name": "Япония"
+    }
+  ]
+}
