@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-import {getData, getGames} from '../controllers/games';
+const gamesController = require('../controllers/games');
 
-router.get('/data', (req, res) => getData(req, res));
-router.get('/games', async (req, res) => getGames(req, res));
+router.get('/data', (req, res) => gamesController.getData(req, res));
+router.get('/games', async (req, res) => gamesController.getGames(req, res));
 
 module.exports = router;

@@ -2,18 +2,18 @@ const DATA = require('../DATA/teams.json');
 const teams = DATA.teams;
 
 /* * * * * * * *
-* reSortData use inside next functions:
+* reformData includes next functions:
 *   - getRuName(team_id)
 * * * * * * * */
-const reSortData = (data) => {
+const reformData = (data) => {
     let games = [];
     let closest_game = [];
 
     for (const group of Object.keys(data)) {
         let unfinishedGames = [];
         data[group].matches.map( match => {
-            let gameRow = getRuName(match.home_team) + ' — ' + getRuName(match.away_team);
-            let scoreRow = match.home_result + ' — ' + match.away_result;
+            const gameRow = getRuName(match.home_team) + ' — ' + getRuName(match.away_team);
+            const scoreRow = match.home_result + ' — ' + match.away_result;
             if (match.finished) {
                 games.push({
                     id: match.name,
@@ -44,18 +44,18 @@ const reSortData = (data) => {
 };
 
 /* * * * * * * *
-* reSortGames use inside next functions:
+* reformGames includes next functions:
 *   - insertGame(game, score, id)
 *   - setCountrytat(team)
 * * * * * * * */
-const reSortGames = (rows, games) => {
+const reformGames = (rows, games) => {
     let haveArticle = true;
     let i = 0;
     let games_list = [];
 
     rows.forEach( row => games_list.push(row.game_id) );
     games.map( data => {
-        let isGameExists = games_list.includes(data.id);
+        const isGameExists = games_list.includes(data.id);
         if (!isGameExists) {
             let countries = data.game.split(' — ');
             i++;
@@ -71,7 +71,7 @@ const reSortGames = (rows, games) => {
 };
 
 /* * * * * * * *
-* setCountryStat use inside next functions:
+* setCountryStat includes next functions:
 *   - updateStat(country, data)
 * * * * * * * */
 const setCountryStat = async (country, basket) => {
@@ -160,4 +160,5 @@ const insertGame = async (game, score, id) => {
     });
 };
 
-export {reSortData, reSortGames};
+const gamesHelper = { reformData, reformGames };
+module.exports = gamesHelper;
