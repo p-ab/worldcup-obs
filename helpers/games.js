@@ -3,6 +3,7 @@ const teams = DATA.teams;
 
 /* * * * * * * *
 <<<<<<< HEAD
+<<<<<<< HEAD
 * reformData includes next functions:
 *   - getRuName(team_id)
 * * * * * * * */
@@ -13,6 +14,12 @@ const reformData = (data) => {
 * * * * * * * */
 const reSortData = (data) => {
 >>>>>>> c8c79c3... Add Controller & Helper
+=======
+* reformData includes next functions:
+*   - getRuName(team_id)
+* * * * * * * */
+const reformData = (data) => {
+>>>>>>> f522c58... update readme, fix controller and helper syntax
     let games = [];
     let closest_game = [];
 
@@ -20,12 +27,17 @@ const reSortData = (data) => {
         let unfinishedGames = [];
         data[group].matches.map( match => {
 <<<<<<< HEAD
+<<<<<<< HEAD
             const gameRow = getRuName(match.home_team) + ' — ' + getRuName(match.away_team);
             const scoreRow = match.home_result + ' — ' + match.away_result;
 =======
             let gameRow = getRuName(match.home_team) + ' — ' + getRuName(match.away_team);
             let scoreRow = match.home_result + ' — ' + match.away_result;
 >>>>>>> c8c79c3... Add Controller & Helper
+=======
+            const gameRow = getRuName(match.home_team) + ' — ' + getRuName(match.away_team);
+            const scoreRow = match.home_result + ' — ' + match.away_result;
+>>>>>>> f522c58... update readme, fix controller and helper syntax
             if (match.finished) {
                 games.push({
                     id: match.name,
@@ -57,6 +69,7 @@ const reSortData = (data) => {
 
 /* * * * * * * *
 <<<<<<< HEAD
+<<<<<<< HEAD
 * reformGames includes next functions:
 *   - insertGame(game, score, id)
 *   - setCountrytat(team)
@@ -69,6 +82,13 @@ const reformGames = (rows, games) => {
 * * * * * * * */
 const reSortGames = (rows, games) => {
 >>>>>>> c8c79c3... Add Controller & Helper
+=======
+* reformGames includes next functions:
+*   - insertGame(game, score, id)
+*   - setCountrytat(team)
+* * * * * * * */
+const reformGames = (rows, games) => {
+>>>>>>> f522c58... update readme, fix controller and helper syntax
     let haveArticle = true;
     let i = 0;
     let games_list = [];
@@ -76,10 +96,14 @@ const reSortGames = (rows, games) => {
     rows.forEach( row => games_list.push(row.game_id) );
     games.map( data => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const isGameExists = games_list.includes(data.id);
 =======
         let isGameExists = games_list.includes(data.id);
 >>>>>>> c8c79c3... Add Controller & Helper
+=======
+        const isGameExists = games_list.includes(data.id);
+>>>>>>> f522c58... update readme, fix controller and helper syntax
         if (!isGameExists) {
             let countries = data.game.split(' — ');
             i++;
@@ -96,10 +120,14 @@ const reSortGames = (rows, games) => {
 
 /* * * * * * * *
 <<<<<<< HEAD
+<<<<<<< HEAD
 * setCountryStat includes next functions:
 =======
 * setCountryStat use inside next functions:
 >>>>>>> c8c79c3... Add Controller & Helper
+=======
+* setCountryStat includes next functions:
+>>>>>>> f522c58... update readme, fix controller and helper syntax
 *   - updateStat(country, data)
 * * * * * * * */
 const setCountryStat = async (country, basket) => {
@@ -189,8 +217,13 @@ const insertGame = async (game, score, id) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const gamesHelper = { reformData, reformGames };
 module.exports = gamesHelper;
 =======
 export {reSortData, reSortGames};
 >>>>>>> c8c79c3... Add Controller & Helper
+=======
+const gamesHelper = { reformData, reformGames };
+module.exports = gamesHelper;
+>>>>>>> f522c58... update readme, fix controller and helper syntax
