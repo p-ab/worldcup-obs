@@ -3,7 +3,7 @@ const router = express.Router();
 const gamesController = require('../controllers/games');
 
 router.use((req, res, next) => {
-  res.locals.type = 'groups';
+  res.locals.type = 'knockout';
   next();
 });
 router.get('/data', (req, res) => gamesController.pullData(req, res));

@@ -1,8 +1,8 @@
 module.exports = {
   host: 'localhost',
-  user: 'guest',
-  database: 'digital_war',
-  password: 'Trymydick2000',
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASS,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
