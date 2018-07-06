@@ -126,9 +126,9 @@ const updateGroupStat = async (country, basket, values) => {
     const query1 = `INSERT INTO teams (country, basket, group_games) 
                   VALUES ('${country}', '${basket}', '${strVals}')
                   ON DUPLICATE KEY UPDATE group_games=`;
-    const query2 = `JSON_SET(group_games, \'$.goals\', '${goals}', 
-                    \'$.stats\', '${stats}', 
-                    \'$.id_list\', '${ids}');`;
+    const query2 = `JSON_SET(group_games, \'$.goals\', \'${goals}\', 
+                    \'$.stats\', \'${stats}\', 
+                    \'$.id_list\', \'${ids}\');`;
     const query = query1 + query2 ;
 
     pool.query(query, (error, results, fields) => {
